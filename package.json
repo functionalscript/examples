@@ -1,0 +1,30 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "Examples of using FunctionalScript",
+  "scripts": {
+    "test": "tsc && fjs t",
+    "web": "fjs web . 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/functionalscript/examples.git"
+  },
+  "keywords": [],
+  "author": "Shandar Denys",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/functionalscript/examples/issues"
+  },
+  "homepage": "https://github.com/functionalscript/examples#readme",
+  "dependencies": {
+    "functionalscript": "0.58.0"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

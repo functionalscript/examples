@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FunctionalScript examples</title>
+<!-- Maps the bare `functionalscript/...` specifiers used in src/ to the installed package. -->
+<script type="importmap">
+{ "imports": { "functionalscript/": "./node_modules/functionalscript/" } }
+</script>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 16px; }
+  label { display: block; margin-bottom: 1rem; }
+  input { display: block; font: inherit; width: 100%; box-sizing: border-box; padding: .3rem; margin-top: .25rem; }
+  input[readonly] { font-family: ui-monospace, monospace; background: #f4f4f4; }
+</style>
+</head>
+<body>
+<h1>FunctionalScript examples</h1>
+<label>Text <input id="text" value="abc"></label>
+<label>sha256Hex <input id="out" readonly></label>
+<script type="module">
+import { sha256Hex } from './src/sha2/module.f.mjs'
+
+const text = document.getElementById('text')
+const out = document.getElementById('out')
+const render = () => { out.value = sha256Hex(text.value) }
+text.oninput = render
+render()
+</script>
+</body>
+</html>
